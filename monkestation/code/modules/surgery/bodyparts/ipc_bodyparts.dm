@@ -10,7 +10,7 @@
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	head_flags = HEAD_HAIR |  HEAD_LIPS | HEAD_EYECOLOR | HEAD_LIPS
+	head_flags = HEAD_LIPS | HEAD_EYECOLOR | HEAD_LIPS
 	brute_modifier = 1.2 // Monkestation Edit
 	burn_modifier = 1.2 // Monkestation Edit
 
