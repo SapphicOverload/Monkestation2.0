@@ -45,7 +45,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 /obj/item/clothing/mask/gas/sechailer
 	name = "security gas mask"
 	desc = "A standard issue Security gas mask with integrated 'Compli-o-nator 3000' device. Plays over a dozen pre-recorded compliance phrases designed to get scumbags to stand still whilst you tase them. Do not tamper with the device."
-	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/adjust)
+	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/adjust, /datum/action/item_action/dispatch) // MONKE EDIT: Added dispatch action
 	icon_state = "sechailer"
 	inhand_icon_state = "sechailer"
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS | GAS_FILTERING
@@ -123,6 +123,8 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 /obj/item/clothing/mask/gas/sechailer/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/halt))
 		halt()
+	else if(istype(action, /datum/action/item_action/dispatch)) // MONKE EDIT: Added dispatch action
+		dispatch(user) // EDIT END
 	else
 		adjustmask(user)
 

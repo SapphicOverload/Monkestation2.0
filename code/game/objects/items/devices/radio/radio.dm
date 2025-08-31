@@ -430,7 +430,7 @@
 	return FALSE
 
 /obj/item/radio/proc/on_recieve_message(list/data)
-	SEND_SIGNAL(src, COMSIG_RADIO_RECEIVE_MESSAGE, data)
+	return SEND_SIGNAL(src, COMSIG_RADIO_RECEIVE_MESSAGE, data) // MONKE EDIT
 	// lol almost nobody will miss this (feel free to uncomment if I'm proven wrong, tho) ~Lucy
 	//flick_overlay_view(overlay_speaker_active, 5 SECONDS)
 

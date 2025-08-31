@@ -183,8 +183,8 @@
 					radios += independent_radio
 
 	for(var/obj/item/radio/called_radio as anything in radios)
-		if(!QDELETED(called_radio))
-			called_radio.on_recieve_message(data)
+		if(!QDELETED(called_radio) && (called_radio.on_recieve_message(data) & RADIO_BLOCK_RECEPTION)) // MONKE EDIT START
+			radios -= called_radio // EDIT END
 
 	// From the list of radios, find all mobs who can hear those.
 	var/list/receive = get_hearers_in_radio_ranges(radios)

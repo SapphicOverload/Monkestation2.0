@@ -302,6 +302,7 @@
 #define COMSIG_RADIO_NEW_MESSAGE "radio_new_message"
 ///called from base of /obj/item/radio/proc/on_receive_messgae(): (list/data)
 #define COMSIG_RADIO_RECEIVE_MESSAGE "radio_receive_message"
+	#define RADIO_BLOCK_RECEPTION (1<<0) // MONKE EDIT
 
 // /obj/item/pen signals
 
